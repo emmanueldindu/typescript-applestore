@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Heebo:wght@300&family=Kalam:wght@300&family=Open+Sans:wght@300&family=Quicksand:wght@300;400;500;600;700&family=Raleway&family=Shadows+Into+Light&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body{
+        @apply font-body font-semibold
+    }
+}
+
+@layer components {
+    .headerLink{
+        @apply cursor-pointer opacity-75 transition hover:opacity-100;
+    }
+    .link{
+        @apply relative cursor-pointer text-lg font-medium before:absolute before:inset-x-0
+        before:-bottom-1.5 before:h-0.5 before:origin-left before:scale-x-0 before:transform
+        before:rounded-bl before:bg-black before:transition-all before:duration-200
+        hover:before:scale-x-100 m-3 mt-6 ;
+    }
+    .button-text{
+        @apply text-lg font-semibold hover:before:scale-x-100 justify-center flex 
+    } 
+    .borderGradient {
+        text-align:center;
+        padding-bottom: 5px;
+        background: linear-gradient(to right, #ec4899, #8b5cf6) left bottom
+        no-repeat;
+        background-size: 100% 2px;
+        transition: ease-in .5s;
+    }
+    .tabPanel{
+        @apply grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3
+         
+    }
+}
